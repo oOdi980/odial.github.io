@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfum Store</title>
+    
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #3e4b61;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.price {
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #3e4b61;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Parfum Store</h1>
+        <p>Temukan parfum favorit Anda!</p>
+    </header>
+
+    <section class="products">
+        <div class="product">
+            <img src="LUMINOS.jpg" alt="Parfum LUMINOS">
+            <h2>Parfum Luminos</h2>
+            <p class="description">Wangi Yang Manis,Creamy,Milky Banana,Floral Cocok Buat Kamu Yang Bosen Sama Wangi Manis Yang Monoton</p>
+            <p class="price">Rp. 300,000</p>
+            <button onclick="addToCart('Parfum LUMINOS')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="ECHANTED.jpg" alt="Parfum ECHANTED">
+            <h2>Parfum Echanted</h2>
+            <p class="description">Wangi yang Elegant,Floral Ala-ala Princess.</p>
+            <p class="price">Rp. 270,000</p>
+            <button onclick="addToCart('Parfum ECHANTED')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY.jpg" alt="Parfum ZORA">
+            <h2>Parfum Zora</h2>
+            <p class="description">Wangi Kombinasi Floral,Buah,Dan Sentuhan Hangat Dari Musk,Elegant Namun Tetap Feminim.</p>
+            <p class="price">Rp. 200,000</p>
+            <button onclick="addToCart('Parfum ZORA')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY1.jpg" alt="Parfum Aphrodite">
+            <h2>Parfum Aphrodite</h2>
+            <p class="description">Aroma Yang Menggambarkan Keanggunan dan Sensualitas,Terinspirasi Dari Dewi Cinta Yunani.</p>
+            <p class="price">Rp. 250,000</p>
+            <button onclick="addToCart('Parfum Aphrodite')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY2.jpg" alt="Parfum Dark Secret">
+            <h2>Parfum Dark Secret</h2>
+            <p class="description">Wangi yang  misterius,intens,dan memikat.Sangat cocok untuk malam hari atau acara khusus.</p>
+            <p class="price">Rp. 300,000</p>
+            <button onclick="addToCart('Parfum Dark Secret')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY3.jpg" alt="Parfum Utopia">
+            <h2>Parfum Utopia</h2>
+            <p class="description">Aroma yang tenang,memanjakan dan sedikit dreamy</p>
+            <p class="price">Rp. 200,000</p>
+            <button onclick="addToCart('Parfum Utopia')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY4.jpg" alt="Parfum Matcha Latte">
+            <h2>Parfum Matcha Latte</h2>
+            <p class="description">Memiliki aroma creamy dengan perpaduan jasmine dan white chocolate, membuat wanginya lebih relaxing.</p>
+            <p class="price">Rp. 200,000</p>
+            <button onclick="addToCart('Parfum Matcha Latte')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY5.jpg" alt="Parfum Viollete">
+            <h2>Parfum Viollete</h2>
+            <p class="description">Memiliki aroma lembut,manis,dan powdery,menciptakan nuansa feminim,elegan,dan klasik,dengan kesan yang lembut dan romantis.</p>
+            <p class="price">Rp. 250,000</p>
+            <button onclick="addToCart('Parfum Viollete')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY6.jpg" alt="Parfum Senja">
+            <h2>Parfum Senja</h2>
+            <p class="description">Wangi yang hangat seperti matahari terbenam,menciptakan aroma yang tenang,lembut,dan sedikit misteriuss.</p>
+            <p class="price">Rp. 200,000</p>
+            <button onclick="addToCart('Parfum Senja')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY7.jpg" alt="Parfum Tea Poetry">
+            <h2>Parfum Tea Poetry</h2>
+            <p class="description">Aroma yang ringan dan menenangkan,terinspirasi oleh kesegaran teh dan keindahan alam.</p>
+            <p class="price">Rp. 200,000</p>
+            <button onclick="addToCart('Parfum Tea Poetry')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MY9.jpg" alt="Parfum Sclupture">
+            <h2>Parfum Sclupture</h2>
+            <p class="description">Wangi yang elegan,segar,dan sedikit eksotis.memiliki top notes dari citrus yang segar,seperti bergamot,lemon.</p>
+            <p class="price">Rp. 270,000</p>
+            <button onclick="addToCart('Parfum Sclupture')">Beli</button>
+        </div>
+
+        <div class="product">
+            <img src="MYDB.jpg" alt="Parfum Bundling">
+            <h2>Paket Bundling Senja dan Zora</h2>
+            <p class="description">Paket wangi yang cocok untuk kamu karena bisa jadi lebih wangi dengan membeli paket bundling ini.</p>
+            <p class="price">Rp. 300,000</p>
+            <button onclick="addToCart('Parfum Bundling')">Beli</button>
+        </div>
+        <!-- Tambahkan produk lainnya sesuai kebutuhan -->
+    </section>
+
+    <footer>
+        
+        <p>&copy; 2023 Parfum Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+    function addToCart(productName) {
+        alert(productName + " telah ditambahkan ke keranjang belanja.");
+    }
+    </script>
+</body>
+</html>

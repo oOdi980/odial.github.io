@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Perpustakaan Alkavi</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="koleksi.html">Koleksi</a></li>
+            <li><a href="tentang kami.html">Tentang Saya</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="library"></div>
+        <div class="pos">
+            <section id="about">
+                <h2>Tentang Saya</h2>
+                <p style="font-family: 'Times New Roman', Times, serif;">Perkenalkan nama saya Muhammad Shodiq Alkarim, saya adalah Mahasiswa Semester 1 di Universitas Pamulang. Mohon maaf sebelumnya jika anda masih menemukan banyak kekurangan di website saya ini, kedepannya saya akan lebih giat dalam mempelajari hal ini sehingga mencapai tingkat ahli atau expert.</p>
+            </section>
+
+            <section id="features">
+                <h2>Fitur Kami</h2>
+                <div class="feature-container">
+                    <div class="feature-card">
+                        <h3>Kursus Berkualitas</h3>
+                        <p>Kursus kami dirancang oleh para ahli di bidangnya, sehingga Anda bisa mendapatkan pengetahuan yang terpercaya.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Fleksibilitas Waktu</h3>
+                        <p>Belajar kapan saja dan di mana saja sesuai dengan jadwal Anda.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Dukungan Mentor</h3>
+                        <p>Dapatkan bimbingan langsung dari mentor yang berpengalaman.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials">
+                <h2>Testimoni</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial-card">
+                        <p>"Platform ini sangat membantu saya dalam meningkatkan keterampilan saya. Sangat direkomendasikan!"</p>
+                        <p>- John Doe</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Kursus yang disediakan sangat lengkap dan mudah dipahami. Terima kasih!"</p>
+                        <p>- Jane Smith</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Kontak Kami</h2>
+                <form id="contactForm">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Kirim</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Muhammad Shodiq Alkarim. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            alert(`Terima kasih, ${name}! Pesan Anda telah dikirim.`);
+            
+            // Reset form setelah pengiriman
+            this.reset();
+        });
+    </script>
+</body>
+</html>
